@@ -1,0 +1,28 @@
+2021-01-30 09:04:55,356 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting ScbBankingApplication using Java 1.8.0_144 on CHARAN-PC with PID 6132 (D:\eswar\hcl_spring\assignments\SCBBanking\SCBBanking\target\classes started by CHARAN in D:\eswar\hcl_spring\assignments\SCBBanking\SCBBanking)
+2021-01-30 09:04:55,434 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-01-30 09:04:56,826 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-30 09:04:56,828 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-30 09:05:08,272 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-30 09:05:09,040 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 658 ms. Found 3 JPA repository interfaces.
+2021-01-30 09:05:11,046 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=2268fc7c-4829-32cc-aaf1-f63a855ac23a
+2021-01-30 09:05:16,509 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8888 (http)
+2021-01-30 09:05:16,657 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8888"]
+2021-01-30 09:05:16,672 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-01-30 09:05:16,673 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-30 09:05:17,371 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-01-30 09:05:17,387 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 20428 ms
+2021-01-30 09:05:18,555 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-01-30 09:05:20,318 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-01-30 09:05:20,821 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-30 09:05:21,625 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-01-30 09:05:23,299 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-30 09:05:24,328 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-01-30 09:05:29,183 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-30 09:05:29,280 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-30 09:05:33,162 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-30 09:05:33,951 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-30 09:05:39,547 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-01-30 09:05:41,770 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8888"]
+2021-01-30 09:05:42,068 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8888 (http) with context path '/ScbBanking'
+2021-01-30 09:05:43,678 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started ScbBankingApplication in 56.996 seconds (JVM running for 65.362)
+2021-01-30 13:22:49,040 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h58m48s190ms782µs962ns).

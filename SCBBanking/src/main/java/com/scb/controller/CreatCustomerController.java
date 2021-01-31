@@ -4,8 +4,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.scb.dto.CustCreatedto;
@@ -20,7 +20,7 @@ public class CreatCustomerController {
 	CustomerCreationServiceImpl registerService;
 	
 	@PostMapping("")
-	public String saveUser(@RequestBody CustCreatedto new2bank) {
+	public String saveUser(@RequestParam CustCreatedto new2bank) {
 		System.out.println("test----------------->");
 		logger.info(" Rquest received to create customer in CreatCustomerController ");
 		
@@ -33,7 +33,7 @@ public class CreatCustomerController {
 			return " Your Pan Number should not be  Null";
 		 else if(null == firstName)
 			return " Your First Name should not be  Null";
-		else if(null==lastName)
+		else if("null"==lastName)
 			return " Your First Name should not be  Null";
 		else if(null==Age)
 			return " Your First Age should not be  Null";

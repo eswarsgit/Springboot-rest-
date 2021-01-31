@@ -62,7 +62,7 @@ public class FundtransferServicePImpil implements FundtransferService {
 		txnRepo.save(txnToacc);
 		System.out.println("=====FundtransferServicePImpil  =doTransper=====To Account ======="+toAcc +"compleeted  to account update on Records Status -- after txnRepo.save(txn1);");
 		
-		Long total = 0L;// txnRepo.FindByAccountbalance(toAcc);
+		Long total = txnToacc.getAccountBalance();
 		total = total + trfAmt;
 		txnDescp = " Added the Amount : " + trfAmt + "-- From Transfer--" + fromAcc;
 		
