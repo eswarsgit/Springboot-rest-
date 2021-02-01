@@ -1,4 +1,4 @@
-package com.order.hclorders.controller;
+package com.hcl.orders.hclOrdersnew.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.order.hclorders.dto.PlaceOrderDetail;
-import com.order.hclorders.service.PlaceOrderService;
-import com.order.hclorders.util.StringUilts;
+import com.hcl.orders.hclOrdersnew.dto.PlaceOrderDetail;
+import com.hcl.orders.hclOrdersnew.service.PlaceOrderService;
+import com.hcl.orders.hclOrdersnew.util.StringUilts;
 @RestController
 @RequestMapping("/placeorder")
 public class PlaceOrderController {

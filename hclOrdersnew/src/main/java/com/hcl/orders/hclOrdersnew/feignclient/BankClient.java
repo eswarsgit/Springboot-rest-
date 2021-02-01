@@ -1,4 +1,4 @@
-package com.order.hclorders.feignclient;
+package com.hcl.orders.hclOrdersnew.feignclient;
 
 import javax.validation.constraints.Min;
 

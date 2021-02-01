@@ -1,0 +1,15 @@
+package com.hcl.orders.hclOrdersnew.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.hcl.orders.hclOrdersnew.entity.Orders;
+
+
+@Repository
+public interface OrdersReposotory extends JpaRepository<Orders,Long>{
+
+	
+	
+
+}

@@ -1,4 +1,4 @@
-package com.order.hclorders.service.serviceimpl;
+package com.hcl.orders.hclOrdersnew.service.serviceimpl;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -9,17 +9,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.stereotype.Service;
 
-import com.order.hclorders.dto.MenuDto;
-import com.order.hclorders.dto.PlaceOrderDetail;
-import com.order.hclorders.entity.Menu;
-import com.order.hclorders.entity.OrderHistory;
-import com.order.hclorders.entity.Orders;
-import com.order.hclorders.feignclient.BankClient;
-import com.order.hclorders.repository.FoodSearchReposotiry;
-import com.order.hclorders.repository.OrdersReposotory;
-import com.order.hclorders.repository.PlaceOrderServiceRepository;
-import com.order.hclorders.service.PlaceOrderService;
-import com.order.hclorders.util.StringUilts;
+import com.hcl.orders.hclOrdersnew.dto.MenuDto;
+import com.hcl.orders.hclOrdersnew.dto.PlaceOrderDetail;
+import com.hcl.orders.hclOrdersnew.entity.Menu;
+import com.hcl.orders.hclOrdersnew.entity.OrderHistory;
+import com.hcl.orders.hclOrdersnew.entity.Orders;
+import com.hcl.orders.hclOrdersnew.feignclient.BankClient;
+import com.hcl.orders.hclOrdersnew.repository.FoodSearchReposotiry;
+import com.hcl.orders.hclOrdersnew.repository.OrdersReposotory;
+import com.hcl.orders.hclOrdersnew.repository.PlaceOrderServiceRepository;
+import com.hcl.orders.hclOrdersnew.service.PlaceOrderService;
+import com.hcl.orders.hclOrdersnew.util.StringUilts;
+
 
 @EnableFeignClients
 @Service

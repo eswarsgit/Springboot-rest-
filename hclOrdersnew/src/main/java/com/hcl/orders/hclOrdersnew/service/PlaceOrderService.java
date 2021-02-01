@@ -1,6 +1,6 @@
-package com.order.hclorders.service;
+package com.hcl.orders.hclOrdersnew.service;
 
-import com.order.hclorders.dto.PlaceOrderDetail;
+import com.hcl.orders.hclOrdersnew.dto.PlaceOrderDetail;
 
 public interface PlaceOrderService {
 
