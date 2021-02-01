@@ -40,12 +40,12 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
 
 		ArrayList<MenuDto> odList = orderedtls.getOrderDetails();
 		ArrayList<OrderHistory> orderhistLst = new ArrayList<OrderHistory>();
-		OrderHistory od = new OrderHistory(orderedtls.getUsrId());
+		
 		Long total = 0L;
 
 		for (int i = 0; i < odList.size(); i++) {
 			Long totalAmount = 0L;
-
+			OrderHistory od = new OrderHistory(orderedtls.getUsrId());
 			MenuDto mto = odList.get(i);
 
 			if (StringUilts.validateStr(mto.getMenuid()))
@@ -61,10 +61,10 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
 			totalAmount = mto.getQuantity() * mn.getPrice();
 			total = totalAmount + total;
 			od.setOrderQuantity(mto.getQuantity());
-			od.setRateperunit(100L);
+			od.setRateperunit(mn.getPrice());
 			od.setOrderAmt(totalAmount);
 			od.setOrderdesc(mto.getMenuid());
-			od.setCustId(100L);
+			od.setCustId(orderedtls.getUsrId());
 			od.setOrderedDate(LocalDateTime.now());
 			orderhistLst.add(od);
 		}
@@ -74,14 +74,23 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
 		ords.setOrdersUserId(orderedtls.getUsrId());
 		ords.setTotalAmount(total);
 		Orders orderSavedEntity = ordersRepo.save(ords);
+		
+		
 
-		orderhistLst.forEach(f -> f.setOrderedtxnId(orderSavedEntity.getOrderId()));
+		//orderhistLst.forEach(f -> f.setOrderedtxnId(orderSavedEntity.getOrderId()));
+	//	orderhistLst.forEach(tmp->ordersRepo.save(tmp));
 
 		System.out.println("orderhistLst.size()" + orderhistLst.size());
 System.out.println("==================================================Banking===================");
 Long toAcc=(long) 123456798;
 String resp=bankclnt.doFundtransfer(orderedtls.getFrmAccountnum(), toAcc, total);
-		placeServiceRepo.saveAll(orderhistLst);
+
+for(int i=0;i<orderhistLst.size();i++) {
+	
+	orderhistLst.get(i).setOrderedtxnId(orderSavedEntity.getOrderId());
+	placeServiceRepo.save(orderhistLst.get(i));
+}
+//		placeServiceRepo.saveAll(orderhistLst);
 
 //2nd try
 		// plcdtls<MenuDto> lambdaExpression = x->x.getList();

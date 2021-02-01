@@ -8,11 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.order.hclorders.dto.OrdersHistoryDto;
+import com.order.hclorders.dto.OrdersTxnDetail;
 import com.order.hclorders.service.HistoryService;
 
 @RestController 
 @RequestMapping("/orderhis")
-public class OrderHistory {
+public class OrderHistoryController {
 	
 	@Autowired
 	HistoryService historyService;
@@ -20,6 +21,11 @@ public class OrderHistory {
 	@GetMapping("")
 	public List<OrdersHistoryDto> getLatestDetail() {
 	return historyService.getLatestDetail();
-
 }
+
+	@GetMapping("findByHistory")
+	public List<OrdersTxnDetail> getTransactionDetail() {
+	return historyService.getTransactionDetail();
+}
+	
 }

@@ -17,6 +17,7 @@ public class OrderHistory implements Serializable {
 	/**
 	 * 
 	 */
+	public OrderHistory() {}
 	private static final long serialVersionUID = 1L;
 
 

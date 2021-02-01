@@ -1,17 +1,18 @@
 package com.order.hclorders.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.order.hclorders.entity.OrderHistory;
-import com.order.hclorders.entity.Orders;
 
 @Repository
-public interface OrdersReposotory extends JpaRepository<Orders,Long>{
+public interface OrderedHistoryRepository  extends JpaRepository<OrderHistory, Long>{
 
-	Object save(OrderHistory tmp);
 
-	
-	
+
+
+	List<OrderHistory> findByorderedtxnId(Long ordId);
 
 }

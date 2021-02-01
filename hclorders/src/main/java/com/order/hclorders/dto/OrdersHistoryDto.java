@@ -51,6 +51,14 @@ public class OrdersHistoryDto implements Serializable {
 		this.orderedDate = orderedDate;
 	}
 
+	public String getUsrName() {
+		return usrName;
+	}
+
+	public void setUsrName(String usrName) {
+		this.usrName = usrName;
+	}
+
 	@Id
 	@Column(name = "orderid")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -66,5 +74,6 @@ public class OrdersHistoryDto implements Serializable {
 	private LocalDateTime orderedDate;
 
 	
+	private String usrName;
 	
 }
